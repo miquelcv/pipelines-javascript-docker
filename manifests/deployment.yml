@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: miquelcvpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: miquelcvpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: miquelcvpipelinesjavascriptdocker 
+          image: subsdefaultcontainerregistry.azurecr.io/miquelcvpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
